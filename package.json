@@ -1,0 +1,8 @@
+{
+  "name": "github-viewer",
+  "version": "1.0.0",
+  "description": "A simpe React App that let's you search for github accounts and display their repositories and all the information ",
+  "main": "app.js",
+  "author": "Ayoub Nejjari",
+  "license": "MIT"
+}
