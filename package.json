@@ -4,5 +4,15 @@
   "description": "A simpe React App that let's you search for github accounts and display their repositories and all the information ",
   "main": "app.js",
   "author": "Ayoub Nejjari",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
 }
