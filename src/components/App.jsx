@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Profile from './github/Profile.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Profile/>
+        <Profile userData={this.state.userData}/>
       </div>
     )
   }
