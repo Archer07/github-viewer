@@ -7,16 +7,43 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'Archer09',
-      userData: [],
+      username: 'Archer07',
+      userData: {},
       userRepos: [],
-      perPage: 5
+      perPage: 5,
+      bio:'',
+      avatar:''
     }
+  }
+  // get user data from github
+  getUserData() {
+    $.ajax({
+      url:'https://api.github.com/users/'+ this.state.username +"?client_id="+this.props.clientId+"&client_secret="+this.props.clientSecret,
+      dataType:'json',
+      cache:false,
+      success: function(data) {
+        this.setState({
+          bio: data.bio,
+          avatar:data.avatar_url
+        });
+        console.log(data);
+      }.bind(this),
+      error: function(xhr, status, err) {
+        alert(err);
+      }.bind(this)
+    });
+  }
+  componentDidMount() {
+    this.getUserData()
   }
   render () {
     return (
       <div>
-        My App
+        <h2>{this.state.username}</h2>
+        <div>
+        <img src={this.state.avatar} width='250px'/>
+        </div>
+        <p className='col-md-3'>{this.state.bio}</p>
       </div>
     )
   }
