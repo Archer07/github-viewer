@@ -22,6 +22,13 @@ class App extends Component {
   }
 }
 
-
+App.propTypes = {
+  clientId: React.PropTypes.string,
+  clientSecret: React.PropTypes.string
+}
+App.defaultProps = {
+  clientId: "7d88414967052b157652",
+  clientSecret: "ef6b7e4730f0c46dda157d069fde28a31548f659"
+}
 
 export default App
