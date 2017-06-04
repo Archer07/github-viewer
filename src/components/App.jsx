@@ -23,12 +23,12 @@ class App extends Component {
       cache:false,
       success: function(data) {
         this.setState({
-          bio: data.bio,
-          avatar:data.avatar_url
+          userData:data
         });
         console.log(data);
       }.bind(this),
       error: function(xhr, status, err) {
+        this.setState({username:null});
         alert(err);
       }.bind(this)
     });
@@ -39,11 +39,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h2>{this.state.username}</h2>
-        <div>
-        <img src={this.state.avatar} width='250px'/>
-        </div>
-        <p className='col-md-3'>{this.state.bio}</p>
+        <Profile/>
       </div>
     )
   }

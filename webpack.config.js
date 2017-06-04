@@ -4,14 +4,11 @@ module.exports = {
 		path: __dirname,
 		filename: 'app/js/main.js'
 	},
-	resolve: { // what kind of files to look for and bundle
+	resolve: {
     modules:[__dirname, 'node_modules'],
     alias: {
-      Tit: 'public/components/Tit.jsx',
-      TitForm:'public/components/TitForm.jsx',
-      TitMsg: 'public/components/TitMsg.jsx'
     },
-    extensions: ['*','.js', '.jsx'] // always takes an array
+    extensions: ['*','.js', '.jsx'] 
   },
 	module: {
 		loaders: [
